@@ -54,7 +54,11 @@ namespace CooperativaCoop
             
             if (TxtContrasena.Text == contraseña && TxtUsuario.Text == Usuario)
             {
-                MessageBox.Show("Bienvenido!");
+               
+                //abrir formulario MDI
+                MDIParent1 m = new MDIParent1();
+                m.Show();
+                
             }
             else
             {

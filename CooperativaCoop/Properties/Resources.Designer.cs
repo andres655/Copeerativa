@@ -69,5 +69,35 @@ namespace CooperativaCoop.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1491253396_5document_image_82883 {
+            get {
+                object obj = ResourceManager.GetObject("1491253396-5document-image_82883", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap magnifier_1_icon_icons_com_56924 {
+            get {
+                object obj = ResourceManager.GetObject("magnifier-1_icon-icons.com_56924", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search_find_lupa_21889 {
+            get {
+                object obj = ResourceManager.GetObject("search_find_lupa_21889", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

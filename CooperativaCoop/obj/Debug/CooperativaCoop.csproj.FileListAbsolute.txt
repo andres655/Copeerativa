@@ -22,3 +22,6 @@ C:\Users\Administrator.RM-BEECH1\Source\Repos\NewRepo4\CooperativaCoop\obj\Debug
 C:\Users\Administrator.RM-BEECH1\Source\Repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.csproj.CopyComplete
 C:\Users\Administrator.RM-BEECH1\Source\Repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.exe
 C:\Users\Administrator.RM-BEECH1\Source\Repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.pdb
+C:\Users\Administrator.RM-BEECH1\source\repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.MDIParent1.resources
+C:\Users\Administrator.RM-BEECH1\source\repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.Usuario.resources
+C:\Users\Administrator.RM-BEECH1\source\repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.Cuenta.resources
