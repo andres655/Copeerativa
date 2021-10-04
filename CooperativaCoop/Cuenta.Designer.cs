@@ -29,6 +29,7 @@ namespace CooperativaCoop
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.CbbCuenta = new System.Windows.Forms.ComboBox();
             this.CbbTipo_Cuenta = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -41,7 +42,9 @@ namespace CooperativaCoop
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.LbCuenta = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // CbbCuenta
@@ -91,6 +94,7 @@ namespace CooperativaCoop
             this.BtnModificar.TabIndex = 5;
             this.BtnModificar.Text = "Modificar";
             this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // BtnEliminar
             // 
@@ -101,14 +105,16 @@ namespace CooperativaCoop
             this.BtnEliminar.TabIndex = 6;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // TxtMonto
             // 
             this.TxtMonto.Location = new System.Drawing.Point(388, 55);
-            this.TxtMonto.Mask = "99999";
+            this.TxtMonto.Mask = "9999999999";
             this.TxtMonto.Name = "TxtMonto";
             this.TxtMonto.Size = new System.Drawing.Size(100, 20);
             this.TxtMonto.TabIndex = 7;
+            this.TxtMonto.Text = "0";
             this.TxtMonto.ValidatingType = typeof(int);
             // 
             // TxtID_Cuenta
@@ -161,6 +167,10 @@ namespace CooperativaCoop
             this.LbCuenta.Text = "ID Cuenta";
             this.LbCuenta.Visible = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Cuenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -183,6 +193,7 @@ namespace CooperativaCoop
             this.Text = "Cuenta";
             this.Load += new System.EventHandler(this.Cuenta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,5 +213,6 @@ namespace CooperativaCoop
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label LbCuenta;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

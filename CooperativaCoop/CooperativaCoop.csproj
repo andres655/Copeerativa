@@ -61,11 +61,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agregar_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregar_Empleado.Designer.cs">
+      <DependentUpon>Agregar_Empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BuscarPrestamo.Designer.cs">
+      <DependentUpon>BuscarPrestamo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Buscar_Cuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Buscar_Cuenta.Designer.cs">
+      <DependentUpon>Buscar_Cuenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cuenta.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cuenta.Designer.cs">
       <DependentUpon>Cuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Historila_Prestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Historila_Prestamo.Designer.cs">
+      <DependentUpon>Historila_Prestamo.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -80,22 +104,87 @@
       <DependentUpon>MDIParent1.cs</DependentUpon>
     </Compile>
     <Compile Include="ObtenerDGV.cs" />
+    <Compile Include="Operar_Trasancion.cs" />
+    <Compile Include="Prestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prestamo.Designer.cs">
+      <DependentUpon>Prestamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registro_Transaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro_Transaciones.Designer.cs">
+      <DependentUpon>Registro_Transaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Retirar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Retirar.Designer.cs">
+      <DependentUpon>Retirar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Retirar_Padre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Retirar_Padre.Designer.cs">
+      <DependentUpon>Retirar_Padre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tipos.cs" />
+    <Compile Include="Tipo_Cuenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tipo_Cuenta.Designer.cs">
+      <DependentUpon>Tipo_Cuenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tipo_Padres.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tipo_Padres.Designer.cs">
+      <DependentUpon>Tipo_Padres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tipo_Prestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tipo_Prestamo.Designer.cs">
+      <DependentUpon>Tipo_Prestamo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tipo_Trasancion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tipo_Trasancion.Designer.cs">
+      <DependentUpon>Tipo_Trasancion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Usuario.Designer.cs">
       <DependentUpon>Usuario.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Agregar_Empleado.resx">
+      <DependentUpon>Agregar_Empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BuscarPrestamo.resx">
+      <DependentUpon>BuscarPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Buscar_Cuenta.resx">
+      <DependentUpon>Buscar_Cuenta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cuenta.resx">
       <DependentUpon>Cuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Historila_Prestamo.resx">
+      <DependentUpon>Historila_Prestamo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIParent1.resx">
       <DependentUpon>MDIParent1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prestamo.resx">
+      <DependentUpon>Prestamo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,6 +196,27 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Registro_Transaciones.resx">
+      <DependentUpon>Registro_Transaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Retirar.resx">
+      <DependentUpon>Retirar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Retirar_Padre.resx">
+      <DependentUpon>Retirar_Padre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tipo_Cuenta.resx">
+      <DependentUpon>Tipo_Cuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tipo_Padres.resx">
+      <DependentUpon>Tipo_Padres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tipo_Prestamo.resx">
+      <DependentUpon>Tipo_Prestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tipo_Trasancion.resx">
+      <DependentUpon>Tipo_Trasancion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Usuario.resx">
       <DependentUpon>Usuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +262,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\magnifier-1_icon-icons.com_56924.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_person_people_man_you_1625.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\business_application_addmale_useradd_insert_add_user_client_2312.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_account_child_128_28130.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\customer_person_people_man_you_16251.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loaning_money_bag_icon_152048.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\money_asset_income_management_icon_152019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\artboard_123064.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help_question_1566.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\technical-support_icon-icons.com_52812.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\page_swap_12968.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view_show_icon_124811.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vault_114361.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloudup_icon-icons.com_54402.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cloudup_icon-icons.com_544021.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\descarga1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

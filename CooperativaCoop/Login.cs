@@ -14,6 +14,7 @@ namespace CooperativaCoop
 {
     public partial class Login : Form
     {
+        public static string Nombre_Empleado="";
         public Login()
         {
             InitializeComponent();
@@ -32,6 +33,7 @@ namespace CooperativaCoop
                 {
 
                     Validar_Usuario();
+                    this.Hide();
 
                 }
 
@@ -54,7 +56,8 @@ namespace CooperativaCoop
             
             if (TxtContrasena.Text == contraseña && TxtUsuario.Text == Usuario)
             {
-               
+
+               Nombre_Empleado= Ds.Tables[0].Rows[0]["Nombre_Empleado"].ToString();
                 //abrir formulario MDI
                 MDIParent1 m = new MDIParent1();
                 m.Show();
@@ -73,6 +76,11 @@ namespace CooperativaCoop
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             MessageBox.Show("Se envió su nueva contraseña a su correo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

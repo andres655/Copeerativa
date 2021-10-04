@@ -16,12 +16,24 @@ namespace CooperativaCoop
                 DataSet Ds;
                 string cmd = string.Format(CadenaBD);
                 Ds = Utilidades.Ejecutar(cmd);
+           
 
                 return Ds;
             
             
         }
 
+        public static DataSet LlenarCuenta(string tabla, string CadenaBD)
+        {
+
+            DataSet Ds;
+            string cmd = string.Format(CadenaBD);
+            Ds = Utilidades.Ejecutar(cmd);
+
+            return Ds;
+
+
+        }
     }
   
 }

@@ -44,26 +44,25 @@ namespace CooperativaCoop
             this.printSetupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.redoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
-            this.selectAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statusBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.socioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.prestamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.agregarPrestamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.historialPrestamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.depositoRetiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.transaccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configuracionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoPrestamoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoTrasancionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoCuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empleadoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.contentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.indexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.searchToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.socioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -73,10 +72,10 @@ namespace CooperativaCoop
             this.printPreviewToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.cuentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -84,15 +83,18 @@ namespace CooperativaCoop
             // 
             // menuStrip
             // 
+            this.menuStrip.BackColor = System.Drawing.Color.YellowGreen;
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenu,
-            this.editMenu,
-            this.viewMenu,
-            this.helpMenu,
-            this.socioToolStripMenuItem});
+            this.socioToolStripMenuItem,
+            this.prestamoToolStripMenuItem,
+            this.depositoRetiroToolStripMenuItem,
+            this.transaccionesToolStripMenuItem,
+            this.configuracionesToolStripMenuItem,
+            this.helpMenu});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(632, 24);
+            this.menuStrip.Size = new System.Drawing.Size(1057, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
             // 
@@ -196,114 +198,113 @@ namespace CooperativaCoop
             this.exitToolStripMenuItem.Text = "&Salir";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
             // 
-            // editMenu
+            // socioToolStripMenuItem
             // 
-            this.editMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.undoToolStripMenuItem,
-            this.redoToolStripMenuItem,
-            this.toolStripSeparator6,
-            this.cutToolStripMenuItem,
-            this.copyToolStripMenuItem,
-            this.pasteToolStripMenuItem,
-            this.toolStripSeparator7,
-            this.selectAllToolStripMenuItem});
-            this.editMenu.Name = "editMenu";
-            this.editMenu.Size = new System.Drawing.Size(49, 20);
-            this.editMenu.Text = "&Editar";
+            this.socioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarToolStripMenuItem,
+            this.cuentaToolStripMenuItem});
+            this.socioToolStripMenuItem.Image = global::CooperativaCoop.Properties.Resources.customer_person_people_man_you_16251;
+            this.socioToolStripMenuItem.Name = "socioToolStripMenuItem";
+            this.socioToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.socioToolStripMenuItem.Text = "Socio";
             // 
-            // undoToolStripMenuItem
+            // agregarToolStripMenuItem
             // 
-            this.undoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("undoToolStripMenuItem.Image")));
-            this.undoToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
-            this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
-            this.undoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.undoToolStripMenuItem.Text = "&Deshacer";
+            this.agregarToolStripMenuItem.Image = global::CooperativaCoop.Properties.Resources.business_application_addmale_useradd_insert_add_user_client_2312;
+            this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
+            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.agregarToolStripMenuItem.Text = "Agregar";
+            this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
             // 
-            // redoToolStripMenuItem
+            // cuentaToolStripMenuItem
             // 
-            this.redoToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("redoToolStripMenuItem.Image")));
-            this.redoToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
-            this.redoToolStripMenuItem.Name = "redoToolStripMenuItem";
-            this.redoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.redoToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.redoToolStripMenuItem.Text = "&Rehacer";
+            this.cuentaToolStripMenuItem.Image = global::CooperativaCoop.Properties.Resources.ic_account_child_128_28130;
+            this.cuentaToolStripMenuItem.Name = "cuentaToolStripMenuItem";
+            this.cuentaToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.cuentaToolStripMenuItem.Text = "Cuenta";
+            this.cuentaToolStripMenuItem.Click += new System.EventHandler(this.cuentaToolStripMenuItem_Click);
             // 
-            // toolStripSeparator6
+            // prestamoToolStripMenuItem
             // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(201, 6);
+            this.prestamoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarPrestamoToolStripMenuItem,
+            this.historialPrestamoToolStripMenuItem});
+            this.prestamoToolStripMenuItem.Image = global::CooperativaCoop.Properties.Resources.artboard_123064;
+            this.prestamoToolStripMenuItem.Name = "prestamoToolStripMenuItem";
+            this.prestamoToolStripMenuItem.Size = new System.Drawing.Size(85, 20);
+            this.prestamoToolStripMenuItem.Text = "Prestamo";
             // 
-            // cutToolStripMenuItem
+            // agregarPrestamoToolStripMenuItem
             // 
-            this.cutToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("cutToolStripMenuItem.Image")));
-            this.cutToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
-            this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-            this.cutToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.cutToolStripMenuItem.Text = "Cor&tar";
-            this.cutToolStripMenuItem.Click += new System.EventHandler(this.CutToolStripMenuItem_Click);
+            this.agregarPrestamoToolStripMenuItem.Image = global::CooperativaCoop.Properties.Resources.loaning_money_bag_icon_152048;
+            this.agregarPrestamoToolStripMenuItem.Name = "agregarPrestamoToolStripMenuItem";
+            this.agregarPrestamoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.agregarPrestamoToolStripMenuItem.Text = "Agregar Prestamo";
+            this.agregarPrestamoToolStripMenuItem.Click += new System.EventHandler(this.agregarPrestamoToolStripMenuItem_Click);
             // 
-            // copyToolStripMenuItem
+            // historialPrestamoToolStripMenuItem
             // 
-            this.copyToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("copyToolStripMenuItem.Image")));
-            this.copyToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
-            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.copyToolStripMenuItem.Text = "&Copiar";
-            this.copyToolStripMenuItem.Click += new System.EventHandler(this.CopyToolStripMenuItem_Click);
+            this.historialPrestamoToolStripMenuItem.Image = global::CooperativaCoop.Properties.Resources.money_asset_income_management_icon_152019;
+            this.historialPrestamoToolStripMenuItem.Name = "historialPrestamoToolStripMenuItem";
+            this.historialPrestamoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.historialPrestamoToolStripMenuItem.Text = "Historial Prestamo";
+            this.historialPrestamoToolStripMenuItem.Click += new System.EventHandler(this.historialPrestamoToolStripMenuItem_Click);
             // 
-            // pasteToolStripMenuItem
+            // depositoRetiroToolStripMenuItem
             // 
-            this.pasteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("pasteToolStripMenuItem.Image")));
-            this.pasteToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
-            this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-            this.pasteToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.pasteToolStripMenuItem.Text = "&Pegar";
-            this.pasteToolStripMenuItem.Click += new System.EventHandler(this.PasteToolStripMenuItem_Click);
+            this.depositoRetiroToolStripMenuItem.Image = global::CooperativaCoop.Properties.Resources.vault_114361;
+            this.depositoRetiroToolStripMenuItem.Name = "depositoRetiroToolStripMenuItem";
+            this.depositoRetiroToolStripMenuItem.Size = new System.Drawing.Size(118, 20);
+            this.depositoRetiroToolStripMenuItem.Text = "Deposito/Retiro";
+            this.depositoRetiroToolStripMenuItem.Click += new System.EventHandler(this.depositoRetiroToolStripMenuItem_Click);
             // 
-            // toolStripSeparator7
+            // transaccionesToolStripMenuItem
             // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(201, 6);
+            this.transaccionesToolStripMenuItem.Image = global::CooperativaCoop.Properties.Resources.page_swap_12968;
+            this.transaccionesToolStripMenuItem.Name = "transaccionesToolStripMenuItem";
+            this.transaccionesToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
+            this.transaccionesToolStripMenuItem.Text = "Transacciones";
+            this.transaccionesToolStripMenuItem.Click += new System.EventHandler(this.transaccionesToolStripMenuItem_Click);
             // 
-            // selectAllToolStripMenuItem
+            // configuracionesToolStripMenuItem
             // 
-            this.selectAllToolStripMenuItem.Name = "selectAllToolStripMenuItem";
-            this.selectAllToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.selectAllToolStripMenuItem.Text = "Seleccionar &todo";
+            this.configuracionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tipoPrestamoToolStripMenuItem,
+            this.tipoTrasancionToolStripMenuItem,
+            this.tipoCuentaToolStripMenuItem,
+            this.empleadoToolStripMenuItem});
+            this.configuracionesToolStripMenuItem.Image = global::CooperativaCoop.Properties.Resources.technical_support_icon_icons_com_52812;
+            this.configuracionesToolStripMenuItem.Name = "configuracionesToolStripMenuItem";
+            this.configuracionesToolStripMenuItem.Size = new System.Drawing.Size(122, 20);
+            this.configuracionesToolStripMenuItem.Text = "Configuraciones";
             // 
-            // viewMenu
+            // tipoPrestamoToolStripMenuItem
             // 
-            this.viewMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolBarToolStripMenuItem,
-            this.statusBarToolStripMenuItem});
-            this.viewMenu.Name = "viewMenu";
-            this.viewMenu.Size = new System.Drawing.Size(35, 20);
-            this.viewMenu.Text = "&Ver";
+            this.tipoPrestamoToolStripMenuItem.Name = "tipoPrestamoToolStripMenuItem";
+            this.tipoPrestamoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.tipoPrestamoToolStripMenuItem.Text = "Tipo Prestamo";
+            this.tipoPrestamoToolStripMenuItem.Click += new System.EventHandler(this.tipoPrestamoToolStripMenuItem_Click);
             // 
-            // toolBarToolStripMenuItem
+            // tipoTrasancionToolStripMenuItem
             // 
-            this.toolBarToolStripMenuItem.Checked = true;
-            this.toolBarToolStripMenuItem.CheckOnClick = true;
-            this.toolBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.toolBarToolStripMenuItem.Name = "toolBarToolStripMenuItem";
-            this.toolBarToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.toolBarToolStripMenuItem.Text = "&Barra de herramientas";
-            this.toolBarToolStripMenuItem.Click += new System.EventHandler(this.ToolBarToolStripMenuItem_Click);
+            this.tipoTrasancionToolStripMenuItem.Name = "tipoTrasancionToolStripMenuItem";
+            this.tipoTrasancionToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.tipoTrasancionToolStripMenuItem.Text = "Tipo Trasancion";
+            this.tipoTrasancionToolStripMenuItem.Click += new System.EventHandler(this.tipoTrasancionToolStripMenuItem_Click);
             // 
-            // statusBarToolStripMenuItem
+            // tipoCuentaToolStripMenuItem
             // 
-            this.statusBarToolStripMenuItem.Checked = true;
-            this.statusBarToolStripMenuItem.CheckOnClick = true;
-            this.statusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.statusBarToolStripMenuItem.Name = "statusBarToolStripMenuItem";
-            this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.statusBarToolStripMenuItem.Text = "&Barra de estado";
-            this.statusBarToolStripMenuItem.Click += new System.EventHandler(this.StatusBarToolStripMenuItem_Click);
+            this.tipoCuentaToolStripMenuItem.Name = "tipoCuentaToolStripMenuItem";
+            this.tipoCuentaToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.tipoCuentaToolStripMenuItem.Text = "Tipo Cuenta";
+            this.tipoCuentaToolStripMenuItem.Click += new System.EventHandler(this.tipoCuentaToolStripMenuItem_Click);
+            // 
+            // empleadoToolStripMenuItem
+            // 
+            this.empleadoToolStripMenuItem.Name = "empleadoToolStripMenuItem";
+            this.empleadoToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.empleadoToolStripMenuItem.Text = "Empleado";
+            this.empleadoToolStripMenuItem.Click += new System.EventHandler(this.empleadoToolStripMenuItem_Click);
             // 
             // helpMenu
             // 
@@ -313,8 +314,9 @@ namespace CooperativaCoop
             this.searchToolStripMenuItem,
             this.toolStripSeparator8,
             this.aboutToolStripMenuItem});
+            this.helpMenu.Image = global::CooperativaCoop.Properties.Resources.help_question_1566;
             this.helpMenu.Name = "helpMenu";
-            this.helpMenu.Size = new System.Drawing.Size(53, 20);
+            this.helpMenu.Size = new System.Drawing.Size(69, 20);
             this.helpMenu.Text = "Ay&uda";
             // 
             // contentsToolStripMenuItem
@@ -351,24 +353,9 @@ namespace CooperativaCoop
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.aboutToolStripMenuItem.Text = "&Acerca de... ...";
             // 
-            // socioToolStripMenuItem
-            // 
-            this.socioToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarToolStripMenuItem,
-            this.cuentaToolStripMenuItem});
-            this.socioToolStripMenuItem.Name = "socioToolStripMenuItem";
-            this.socioToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
-            this.socioToolStripMenuItem.Text = "Socio";
-            // 
-            // agregarToolStripMenuItem
-            // 
-            this.agregarToolStripMenuItem.Name = "agregarToolStripMenuItem";
-            this.agregarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.agregarToolStripMenuItem.Text = "Agregar";
-            this.agregarToolStripMenuItem.Click += new System.EventHandler(this.agregarToolStripMenuItem_Click);
-            // 
             // toolStrip
             // 
+            this.toolStrip.BackColor = System.Drawing.Color.Gold;
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newToolStripButton,
             this.openToolStripButton,
@@ -377,10 +364,11 @@ namespace CooperativaCoop
             this.printToolStripButton,
             this.printPreviewToolStripButton,
             this.toolStripSeparator2,
-            this.helpToolStripButton});
+            this.helpToolStripButton,
+            this.toolStripButton1});
             this.toolStrip.Location = new System.Drawing.Point(0, 24);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(632, 25);
+            this.toolStrip.Size = new System.Drawing.Size(1057, 25);
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "ToolStrip";
             // 
@@ -450,13 +438,22 @@ namespace CooperativaCoop
             this.helpToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.helpToolStripButton.Text = "Ayuda";
             // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+            this.toolStripButton1.Text = "Transacciones";
+            // 
             // statusStrip
             // 
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 431);
+            this.statusStrip.Location = new System.Drawing.Point(0, 574);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(632, 22);
+            this.statusStrip.Size = new System.Drawing.Size(1057, 22);
             this.statusStrip.TabIndex = 2;
             this.statusStrip.Text = "StatusStrip";
             // 
@@ -466,18 +463,11 @@ namespace CooperativaCoop
             this.toolStripStatusLabel.Size = new System.Drawing.Size(42, 17);
             this.toolStripStatusLabel.Text = "Estado";
             // 
-            // cuentaToolStripMenuItem
-            // 
-            this.cuentaToolStripMenuItem.Name = "cuentaToolStripMenuItem";
-            this.cuentaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cuentaToolStripMenuItem.Text = "Cuenta";
-            this.cuentaToolStripMenuItem.Click += new System.EventHandler(this.cuentaToolStripMenuItem_Click);
-            // 
             // MDIParent1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(632, 453);
+            this.ClientSize = new System.Drawing.Size(1057, 596);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.toolStrip);
             this.Controls.Add(this.menuStrip);
@@ -487,8 +477,10 @@ namespace CooperativaCoop
             this.MainMenuStrip = this.menuStrip;
             this.Name = "MDIParent1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cooperativa";
+            this.Text = "Cooperativa COOPROSUTURIS le atiende:  ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MDIParent1_FormClosed);
+            this.Load += new System.EventHandler(this.MDIParent1_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.toolStrip.ResumeLayout(false);
@@ -510,9 +502,7 @@ namespace CooperativaCoop
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator6;
         private System.Windows.Forms.ToolStripMenuItem printSetupToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
@@ -524,16 +514,6 @@ namespace CooperativaCoop
         private System.Windows.Forms.ToolStripMenuItem printToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem printPreviewToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editMenu;
-        private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem redoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem selectAllToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem viewMenu;
-        private System.Windows.Forms.ToolStripMenuItem toolBarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem statusBarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpMenu;
         private System.Windows.Forms.ToolStripMenuItem contentsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem indexToolStripMenuItem;
@@ -548,6 +528,17 @@ namespace CooperativaCoop
         private System.Windows.Forms.ToolStripMenuItem socioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cuentaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem prestamoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem agregarPrestamoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem historialPrestamoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem configuracionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoPrestamoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoTrasancionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tipoCuentaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem transaccionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripMenuItem empleadoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem depositoRetiroToolStripMenuItem;
     }
 }
 

@@ -13,6 +13,9 @@ namespace CooperativaCoop
 {
     public partial class Usuario : Form
     {
+        string direccion_Imagen = "";
+
+       
         public Usuario()
         {
             InitializeComponent();
@@ -22,15 +25,19 @@ namespace CooperativaCoop
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            try
+            if (MessageBox.Show("Seguro que quieres agregar este usuario", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                Agregar_Usuario();
-            }
+                try
+                {
+                    Agregar_Usuario();
+                }
 
-            catch (Exception error){
+                catch (Exception error)
+                {
 
-                MessageBox.Show("Error" + error,"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
+                    MessageBox.Show("Error" + error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
         }
 
@@ -47,7 +54,9 @@ namespace CooperativaCoop
                 TxtCorreo.Text = Ds.Tables[0].Rows[0]["Correo"].ToString();
                 TxtNombre.Text = Ds.Tables[0].Rows[0]["Nombre_Usuario"].ToString();
                 TxtTelefono.Text = Ds.Tables[0].Rows[0]["Telefono"].ToString();
-            TxtDireccion.Text = Ds.Tables[0].Rows[0]["Direccion"].ToString();   
+            TxtDireccion.Text = Ds.Tables[0].Rows[0]["Direccion"].ToString();
+            pictureBox1.ImageLocation = Ds.Tables[0].Rows[0]["imagen"].ToString();
+            
 
         }
         private void Buscar_Usuario(string Buscar)
@@ -56,7 +65,6 @@ namespace CooperativaCoop
             CadenaBD = string.Format("SELECT *FROM Usuario WHERE Nombre_Usuario LIKE '%{0}%' or Cedula like '%{0}%'", Buscar);
             dataGridView1.DataSource = ObtenerDGV.LlenarDataGV("Cooperativa",CadenaBD).Tables[0];
         }
-
 
         private void Usuario_Load(object sender, EventArgs e)
         {
@@ -76,22 +84,25 @@ namespace CooperativaCoop
 
         private void BtnModificar_Click(object sender, EventArgs e)
         {
-            //no permite que se realize cambios en blanco
-            if (TxtID_Usuario.Text == "")
+            if (MessageBox.Show("Seguro que quiere Modificar este usuario", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                errorProvider1.SetError(TxtID_Usuario, "No se admite campos vacios");
-            }
-            else
-            {
-                try
+                //no permite que se realize cambios en blanco
+                if (TxtID_Usuario.Text == "")
                 {
-
-                    Modificar_Usuario(TxtID_Usuario.Text);
+                    errorProvider1.SetError(TxtID_Usuario, "No se admite campos vacios");
                 }
-                catch (Exception error)
+                else
                 {
+                    try
+                    {
 
-                    MessageBox.Show("Error" + error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        Modificar_Usuario(TxtID_Usuario.Text);
+                    }
+                    catch (Exception error)
+                    {
+
+                        MessageBox.Show("Error" + error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -99,19 +110,21 @@ namespace CooperativaCoop
         public void Agregar_Usuario()
         {
             //llamar al store procedure  Agregar Usuario
-            string cmd = String.Format("EXEC Agregar_Usuario '{0}','{1}','{2}','{3}','{4}','{5}'",
-                TxtNombre.Text, TxtTelefono.Text, TxtCorreo.Text, TxtCedula.Text, TxtDireccion.Text, DateTime.Now);
+            string cmd = String.Format("EXEC Agregar_Usuario '{0}','{1}','{2}','{3}','{4}','{5}','{6}'",
+                TxtNombre.Text, TxtTelefono.Text, TxtCorreo.Text, TxtCedula.Text, TxtDireccion.Text, DateTime.Now,direccion_Imagen);
             MessageBox.Show("El Usuario se agregro de manera sastifatoria", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             Utilidades.Ejecutar(cmd);
             dataGridView1.DataSource = ObtenerDGV.LlenarDataGV("Cooperativa",CadenaBD).Tables[0];
+            
             Limpiar();
         }
         public void Modificar_Usuario(string ID)
         {
-            //llamar al store procedure  Modificar Usuario
-            string cmd = String.Format("EXEC Actualizar_Usuario '{0}','{1}','{2}','{3}','{4}','{5}'",
-                ID, TxtNombre.Text, TxtTelefono.Text, TxtDireccion.Text, TxtCorreo.Text, TxtCedula.Text);
+            
+                //llamar al store procedure  Modificar Usuario
+                string cmd = String.Format("EXEC Actualizar_Usuario '{0}','{1}','{2}','{3}','{4}','{5}','{6}'",
+                ID, TxtNombre.Text, TxtTelefono.Text, TxtDireccion.Text, TxtCorreo.Text, TxtCedula.Text,direccion_Imagen);
             MessageBox.Show("El Usuario se modifico de manera sastifatoria", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             Utilidades.Ejecutar(cmd);
@@ -121,33 +134,37 @@ namespace CooperativaCoop
         }
         public void Eliminar_Usuario(string ID)
         {
+            
+                //llamar al store procedure Eliminar Usuario
+                string cmd = String.Format("EXEC Eliminar_Usuario '{0}'", ID);
 
-            //llamar al store procedure Eliminar Usuario
-            string cmd = String.Format("EXEC Eliminar_Usuario '{0}'", ID);
-              
-            MessageBox.Show("El Usuario se elimino de manera sastifatoria", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("El Usuario se elimino de manera sastifatoria", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
-            Utilidades.Ejecutar(cmd);
-            dataGridView1.DataSource =  ObtenerDGV.LlenarDataGV("Cooperativa", CadenaBD).Tables[0];
-            Limpiar();
+                Utilidades.Ejecutar(cmd);
+                dataGridView1.DataSource = ObtenerDGV.LlenarDataGV("Cooperativa", CadenaBD).Tables[0];
+                Limpiar();
+            
         }
         #endregion
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
-            if (TxtID_Usuario.Text =="")
+            if (MessageBox.Show("Seguro que quiere eliminar este usuario", "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                errorProvider1.SetError(TxtID_Usuario, "No se admite campos vacios");
-            }
-            else
-            {
-                try
+                if (TxtID_Usuario.Text == "")
                 {
-
-                    Eliminar_Usuario(TxtID_Usuario.Text);
+                    errorProvider1.SetError(TxtID_Usuario, "No se admite campos vacios");
                 }
-                catch (Exception error)
+                else
                 {
-                    MessageBox.Show("Error" + error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    try
+                    {
+
+                        Eliminar_Usuario(TxtID_Usuario.Text);
+                    }
+                    catch (Exception error)
+                    {
+                        MessageBox.Show("Error" + error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -160,6 +177,7 @@ namespace CooperativaCoop
             TxtCorreo.Text = "";
             TxtDireccion.Text = "";
             TxtTelefono.Text = "";
+            pictureBox1.ImageLocation = "";
 
         }
 
@@ -175,6 +193,31 @@ namespace CooperativaCoop
                 MessageBox.Show("Error" + error, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+        }
+
+        private void BtnImagen_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog BuscarImagen = new OpenFileDialog();
+            BuscarImagen.Filter = "Archivos de Imagen|*.jpg";
+            if (BuscarImagen.ShowDialog() == DialogResult.OK)
+            {
+                /// Si esto se cumple, capturamos la propiedad File Name y la guardamos en el control
+                direccion_Imagen = BuscarImagen.FileName;
+               
+                this.pictureBox1.ImageLocation = direccion_Imagen;
+          
+                //Pueden usar tambien esta forma para cargar la Imagen solo activenla y comenten la linea donde se cargaba anteriormente 
+
+
+            }
+
+
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
    

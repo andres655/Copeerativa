@@ -66,16 +66,7 @@ namespace CooperativaCoop
         {
         }
 
-        private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            toolStrip.Visible = toolBarToolStripMenuItem.Checked;
-        }
-
-        private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            statusStrip.Visible = statusBarToolStripMenuItem.Checked;
-        }
-
+       
         private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LayoutMdi(MdiLayout.Cascade);
@@ -102,18 +93,89 @@ namespace CooperativaCoop
             {
                 childForm.Close();
             }
+            Application.Exit();
         }
 
         private void agregarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Usuario usuario = new Usuario();
+            usuario.MdiParent = this;
             usuario.Show();
         }
 
         private void cuentaToolStripMenuItem_Click(object sender, EventArgs e)
         {
           Cuenta cuenta = new Cuenta();
+            cuenta.MdiParent = this;
+
             cuenta.Show();
+        }
+
+        private void agregarPrestamoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           Prestamo prestamo = new Prestamo();
+            prestamo.MdiParent = this;
+
+            prestamo.Show();
+        }
+
+        private void historialPrestamoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Historila_Prestamo historila_Prestamo = new Historila_Prestamo();
+            historila_Prestamo.MdiParent = this;
+            historila_Prestamo.Show();
+        }
+
+        private void tipoPrestamoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tipo_Prestamo tipo_Prestamo = new Tipo_Prestamo();
+            tipo_Prestamo.MdiParent = this;
+            tipo_Prestamo.Show();
+        }
+
+        private void tipoTrasancionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tipo_Trasancion tipo_Trasancion = new Tipo_Trasancion();
+           tipo_Trasancion.MdiParent = this;
+            tipo_Trasancion.Show();
+        }
+
+        private void tipoCuentaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Tipo_Cuenta tipo_Cuenta = new Tipo_Cuenta();
+            tipo_Cuenta.MdiParent = this;
+            tipo_Cuenta.Show();
+        }
+
+        private void transaccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Registro_Transaciones registro_Transaciones = new Registro_Transaciones();
+           registro_Transaciones.MdiParent = this;
+            registro_Transaciones.Show();
+        }
+
+        private void MDIParent1_Load(object sender, EventArgs e)
+        {
+            this.Text += Login.Nombre_Empleado;
+        }
+
+        private void empleadoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           Agregar_Empleado agregar_Empleado = new Agregar_Empleado();
+            agregar_Empleado.MdiParent = this;
+            agregar_Empleado.Show();
+        }
+
+        private void depositoRetiroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Retirar_Padre retirar_Padre = new Retirar_Padre();
+            retirar_Padre.MdiParent = this;
+            retirar_Padre.Show();
+        }
+
+        private void MDIParent1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

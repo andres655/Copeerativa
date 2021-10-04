@@ -25,3 +25,15 @@ C:\Users\Administrator.RM-BEECH1\Source\Repos\NewRepo4\CooperativaCoop\obj\Debug
 C:\Users\Administrator.RM-BEECH1\source\repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.MDIParent1.resources
 C:\Users\Administrator.RM-BEECH1\source\repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.Usuario.resources
 C:\Users\Administrator.RM-BEECH1\source\repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.Cuenta.resources
+C:\Users\Administrator.RM-BEECH1\source\repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.Prestamo.resources
+C:\Users\Administrator.RM-BEECH1\source\repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.BuscarPrestamo.resources
+C:\Users\Administrator.RM-BEECH1\source\repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.Historila_Prestamo.resources
+C:\Users\Administrator.RM-BEECH1\Source\Repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.Tipo_Prestamo.resources
+C:\Users\Administrator.RM-BEECH1\Source\Repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.Tipo_Cuenta.resources
+C:\Users\Administrator.RM-BEECH1\Source\Repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.Tipo_Padres.resources
+C:\Users\Administrator.RM-BEECH1\Source\Repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.Tipo_Trasancion.resources
+C:\Users\Administrator.RM-BEECH1\Source\Repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.Registro_Transaciones.resources
+C:\Users\Administrator.RM-BEECH1\source\repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.Agregar_Empleado.resources
+C:\Users\Administrator.RM-BEECH1\Source\Repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.Retirar_Padre.resources
+C:\Users\Administrator.RM-BEECH1\Source\Repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.Buscar_Cuenta.resources
+C:\Users\Administrator.RM-BEECH1\Source\Repos\NewRepo4\CooperativaCoop\obj\Debug\CooperativaCoop.Retirar.resources
